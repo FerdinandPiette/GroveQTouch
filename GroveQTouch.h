@@ -2,7 +2,7 @@
 #define GroveQTouch_H
 
 #include <Arduino.h>
-#include "../Grove/Grove.h"
+#include <Grove.h>
 #include "Seeed_QTouch.h"
 
 class GroveQTouch {
