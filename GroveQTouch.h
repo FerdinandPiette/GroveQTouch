@@ -11,9 +11,9 @@ class GroveQTouch {
 		SeeedQTouch _sensor;
 		
 	public:
-		GroveQTouch(GrovePin pins);
+		GroveQTouch();
 		virtual ~GroveQTouch() {};
-		void initialize();
+		void initialize(GrovePin pins);
 		boolean isKeyTouch(unsigned char key);
 		unsigned char getState();
 };

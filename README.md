@@ -7,11 +7,11 @@ QTouch Sensor Library for Arduino + Grove shield
 ```c++
 #include <GroveQTouch.h>
 
-GroveQTouch qTouchSensor(GROVE_I2C);
+GroveQTouch qTouchSensor;
 
 void setup() {
   Serial.begin(9600);
-  qTouchSensor.initialize();
+  qTouchSensor.initialize(GROVE_I2C);
   pinMode(13, OUTPUT);
 }
 
@@ -32,12 +32,12 @@ void loop() {
 ```
 
 ## Documentation
-###`GroveQTouch(GrovePin pins)`
+
+###`void initialize(GrovePin pins)`
+Initialize the sensor before using it.
+
 Parameters:
 - `pins`: Must be a digital socket (GROVE_D2 to GROVE_D8)
-
-###`void initialize()`
-Initialize the sensor before using it.
 
 ###`boolean isKeyTouch(unsigned char key)`
 Return `true` if the key is curently touched

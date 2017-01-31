@@ -1,8 +1,8 @@
 #include "GroveQTouch.h"
 
-GroveQTouch::GroveQTouch(GrovePin pins) { }
+GroveQTouch::GroveQTouch() { }
 
-void GroveQTouch::initialize() { }
+void GroveQTouch::initialize(GrovePin pins) { }
 
 boolean GroveQTouch::isKeyTouch(unsigned char key) {
 	return this->_sensor.isTouch(key);
